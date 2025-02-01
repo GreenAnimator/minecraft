@@ -40,6 +40,10 @@ header {
     list-style: none;
 }
 
+.nav__links li::after{
+    content: " ▾";
+}
+
 @media (max-width: 768px) {
     .nav__links {
         gap: 30px; /* Menor espacio entre los enlaces en pantallas pequeñas */
@@ -108,6 +112,7 @@ header {
     box-shadow: 0px -4px 0px #3e3b38;
     padding: 150px 35px;
     text-align: center;
+    justify-content: center;
 }
 
 .btns {
@@ -184,4 +189,72 @@ h1 {
     fill: #6b6463;
     width: 20px;
     height: 20px;
+}
+
+#link-getmc {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+#link-getmc:hover {
+    text-decoration: underline;
+}
+
+#link-getmc::after {
+    content: " ⇗";
+}
+
+.trailers {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.redownload {
+    transform: translateX(165px);
+    width: 900px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(23, 22, 21, 0.9);
+    bottom: 20px;
+    display: grid;
+    grid-template-columns: 100px 500px 270px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.redownload img {
+    height: 80px;
+}
+
+.redownload a button {
+    width: 250px;
+    color: white;
+    background-color: transparent;
+    border: solid 2px white;
+}
+
+.redownload a button:hover {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+footer nav .nav__links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+footer nav .nav__links a:hover {
+    text-decoration: underline;
 }
